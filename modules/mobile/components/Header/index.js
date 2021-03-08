@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
         flex: 1,
     },
     menuButton: {
-        marginRight: theme.spacing(2),
+        marginRight: theme.spacing(1),
     },
 }));
 
@@ -21,13 +21,13 @@ const Header = () => {
 
     return (
         <div className={classes.root}>
-            <AppBar position="fixed">
+            <AppBar position="fixed" color="default">
                 <ToolBar>
                     <IconButton className={classes.menuButton} color="inherit" aria-label="menu">
                         <MenuIcon />
                     </IconButton>
                     <Link href="/">
-                        <Typograpgy variant="h6">Kokas</Typograpgy>
+                        <Typograpgy variant="h6"> ZEELA</Typograpgy>
                     </Link>
                 </ToolBar>
             </AppBar>
