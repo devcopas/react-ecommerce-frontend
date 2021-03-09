@@ -1,5 +1,28 @@
+import Layout from '@common/components/Layout';
+import Container from '@material-ui/core/Container';
+
+import ProductDetailCard from '@mobile/components/ProductDetailCard';
+
 const ProductDetail = ({ product }) => {
-    return <h1>{product.name}</h1>;
+    const { img, name, price, rating, sold, description, quantity, condition, size, promo } = product;
+    return (
+        <Layout>
+            <Container maxWidth="sm">
+                <ProductDetailCard
+                    img={img}
+                    title={name}
+                    price={price}
+                    rating={rating}
+                    sold={sold}
+                    description={description}
+                    quantity={quantity}
+                    condition={condition}
+                    size={size}
+                    promo={promo}
+                />
+            </Container>
+        </Layout>
+    );
 };
 
 export async function getStaticPaths() {
